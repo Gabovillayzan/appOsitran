@@ -1,0 +1,35 @@
+{
+  "name": "Pre-Inspeccion OSITRAN",
+  "short_name": "Pre-Inspeccion OSITRAN",
+  "start_url": "index.html",
+  "description": "Aplicacion para el registro de las inspecciones previas a la inspección de OSITRAN.",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/imgs/ADP512.png",
+       "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/imgs/ADP144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/imgs/ADP192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "author": {
+    "name": "Aeropuertos del Perú SA",
+    "website": "http://www.adp.com.pe"
+  }
+}
+
+
+
+
+

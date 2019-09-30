@@ -1,0 +1,180 @@
+<ion-header>
+  <ion-navbar hideBackButton color="adpVerde">
+    <ion-title>
+      Anexo 8, Numeral 3 - Lado Tierra
+      <p class="subtitle">Playa de estacionamiento y exterior del terminal </p>
+    </ion-title>
+
+    <ion-buttons end>
+      <button *ngIf="!modoLectura" ion-button [attr.icon-only]="!isAndroid ? null : ''" (click)="confirmarCambios()">
+        <span color="primary" showWhen="ios">
+          Cancelar
+        </span>
+        <ion-icon name="md-close" showWhen="core,android,windows"></ion-icon>
+      </button>
+      
+      <button *ngIf="modoLectura" ion-button [attr.icon-only]="!isAndroid ? null : ''" (click)="editarFormulario()">
+        <span color="primary" showWhen="ios">
+          Editar
+        </span>
+        <ion-icon name="md-create" showWhen="core,android,windows"></ion-icon>
+      </button>
+      <button *ngIf="modoLectura" ion-button [attr.icon-only]="!isAndroid ? null : ''" (click)="cancel()">
+        <span color="primary" showWhen="ios">
+          Cancelar
+        </span>
+        <ion-icon name="md-close" showWhen="core,android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Pórtico de entrada</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_1" name="cumplio1_1" (ionChange)="ocultarToogle(1)"
+        color="adpRosa" color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_1" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_1" name="descripcion_1_1"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Caseta de vigilancia</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_2" name="cumplio1_2" (ionChange)="ocultarToogle(2)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_2" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_2" name="descripcion_1_2"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Sistema de cobro</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_3" name="cumplio1_3" (ionChange)="ocultarToogle(3)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_3" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_3" name="descripcion_1_3"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Reja</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_4" name="cumplio1_4" (ionChange)="ocultarToogle(4)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_4" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_4" name="descripcion_1_4"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Limpieza</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_5" name="cumplio1_5" (ionChange)="ocultarToogle(5)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_5" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_5" name="descripcion_1_5"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Señalización H</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_6" name="cumplio1_6" (ionChange)="ocultarToogle(6)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_6" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_6" name="descripcion_1_6"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Señalización V</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_7" name="cumplio1_7" (ionChange)="ocultarToogle(7)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_7" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_7" name="descripcion_1_7"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Estacionamientos [40]</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_8" name="cumplio1_8" (ionChange)="ocultarToogle(8)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_8" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_8" name="descripcion_1_8"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Pavimento</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_9" name="cumplio1_9" (ionChange)="ocultarToogle(9)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_9" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_9" name="descripcion_1_9"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Jardines</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_10" name="cumplio1_10" (ionChange)="ocultarToogle(10)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_10" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_10" name="descripcion_1_10"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="custom-item">
+      <ion-label>Fachada exterior</ion-label>
+      <ion-toggle [disabled]="modoLectura" [(ngModel)]="itemModulo.cumplio1_11" name="cumplio1_11" (ionChange)="ocultarToogle(11)"
+        color="adpRosa"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_11" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [disabled]="modoLectura" rows="5" [(ngModel)]="itemModulo.descripcion_1_11" name="descripcion_1_11"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <!--
+      <button block icon-start ion-button color="dark" (click)="navegarYguardar()">
+        <ion-icon name="md-arrow-dropright-circle" showWhen="core,android,windows"></ion-icon> Siguiente
+      </button>-->
+    <ion-item>
+      <button *ngIf="!modoLectura" ion-button item-left color="dark" (click)="confirmarCambios()">
+        Guardar Cambios
+      </button>
+      <button ion-button item-right (click)="irAlSiguienteModulo()">
+        Siguiente
+      </button>
+
+    </ion-item>
+  </div>
+
+</ion-content>

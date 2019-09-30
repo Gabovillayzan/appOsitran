@@ -1,0 +1,155 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nueva Inspección</ion-title>
+    <ion-buttons end>
+      <button ion-button [attr.icon-only]="!isAndroid ? null : ''" (click)="cancel()">
+        <span color="primary" showWhen="ios">
+          Cancelar
+        </span>
+        <ion-icon name="md-close" showWhen="core,android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <!--
+  <ion-list *ngFor="let item of modulo1; let i = index;trackBy:trackByIndex;">
+      <ion-item class="custom-item">
+      <ion-label>{{item.titulo}}</ion-label>
+      <ion-toggle [(ngModel)]="modulo1[i].cumplio" name="resultado" (ionChange)="ocultarToogle()"></ion-toggle>
+    </ion-item>
+    <ion-item class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="modulo1[i].descripcion" name="descripcion"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  -->
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Pórtico de entrada</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_1" name="cumplio1_1" (ionChange)="ocultarToogle(1)"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_1" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5"  [(ngModel)]="itemModulo.descripcion_1_1" name="descripcion_1_1"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Caseta de vigilancia</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_2" name="cumplio1_2" (ionChange)="ocultarToogle(2)"></ion-toggle>
+    </ion-item>
+    <ion-item  *ngIf="!itemModulo.cumplio1_2" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_2" name="descripcion_1_2"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Sistema de cobro</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_3" name="cumplio1_3" (ionChange)="ocultarToogle(3)"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="!itemModulo.cumplio1_3"  class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_3" name="descripcion_1_3"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Reja</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_4" name="cumplio1_4" (ionChange)="ocultarToogle(4)"></ion-toggle>
+    </ion-item>
+    <ion-item  *ngIf="!itemModulo.cumplio1_4" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_4" name="descripcion_1_4"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Limpieza</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_5" name="cumplio1_5" (ionChange)="ocultarToogle(5)"></ion-toggle>
+    </ion-item>
+    <ion-item  *ngIf="!itemModulo.cumplio1_5" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_5" name="descripcion_1_5"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Señalización H</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_6" name="cumplio1_6" (ionChange)="ocultarToogle(6)"></ion-toggle>
+    </ion-item>
+    <ion-item  *ngIf="!itemModulo.cumplio1_6" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_6" name="descripcion_1_6"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Señalización V</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_7" name="cumplio1_7" (ionChange)="ocultarToogle(7)"></ion-toggle>
+    </ion-item>
+    <ion-item  *ngIf="!itemModulo.cumplio1_7" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_7" name="descripcion_1_7"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Estacionamientos [40]</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_8" name="cumplio1_8" (ionChange)="ocultarToogle(8)"></ion-toggle>
+    </ion-item>
+    <ion-item  *ngIf="!itemModulo.cumplio1_8" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_8" name="descripcion_1_8"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Pavimento</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_9" name="cumplio1_9" (ionChange)="ocultarToogle(9)"></ion-toggle>
+    </ion-item>
+    <ion-item  *ngIf="!itemModulo.cumplio1_9" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_9" name="descripcion_1_9"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Jardines</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_10" name="cumplio1_10" (ionChange)="ocultarToogle(10)"></ion-toggle>
+    </ion-item>
+    <ion-item  *ngIf="!itemModulo.cumplio1_10" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_10" name="descripcion_1_10"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="custom-item">
+      <ion-label>Fachada exterior</ion-label>
+      <ion-toggle [(ngModel)]="itemModulo.cumplio1_11" name="cumplio1_11" (ionChange)="ocultarToogle(11)"></ion-toggle>
+    </ion-item>
+    <ion-item  *ngIf="!itemModulo.cumplio1_11" class="custom-item">
+      <ion-label>Descripción</ion-label>
+      <ion-textarea rows="5" [(ngModel)]="itemModulo.descripcion_1_11" name="descripcion_1_11"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button block icon-start ion-button color="dark" (click)="done()">
+      <ion-icon name="md-arrow-dropright-circle" showWhen="core,android,windows"></ion-icon> Siguiente
+    </button>
+  </div>
+
+</ion-content>

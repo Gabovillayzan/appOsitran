@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar hideBackButton color="adpVerde">
+    <ion-title>
+      Seleccione su aeropuerto
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of data;" (click)="filtrarPorAeropuerto(item.id,item.descripcion)">
+      <h2>{{item.descripcion}}</h2>
+    </button>
+  </ion-list>
+</ion-content>

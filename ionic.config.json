@@ -1,0 +1,7 @@
+{
+  "name": "AppOsitran",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
